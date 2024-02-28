@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>点击一个input依次触发的事件</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+    <input id="text" type="text">
+    
+    <script>
+      // 点击一次依次输出
+      // onmouseenter
+      // onmousedown
+      // onfocus
+      // onclick
+      const text = document.getElementById('text');
+      text.onclick = function (e) {
+        console.log('onclick')
+      }
+      text.onfocus = function (e) {
+        console.log('onfocus')
+      }
+      text.onmousedown = function (e) {
+        console.log('onmousedown')
+      }
+      text.onmouseenter = function (e) {
+        console.log('onmouseenter')
+      }
+    </script>
+  </body>
+</html>
