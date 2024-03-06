@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>清除浮动</title>
+  <style>
+    .demo {
+      width: 100px;
+      height: 100px;
+      background-color: red;
+    }
+    .col {
+      float: left;
+      width: 100px;
+      height: 100px;
+      background-color: antiquewhite;
+    }
+    .col:nth-child(2n) {
+      background-color: aqua;
+    }
+    .clearfix {
+      border: 1px solid #000;
+    }
+    /* .clearfix::after {
+      content: '.';
+      display: block;
+      visibility: hidden;
+      clear: both;
+      height: 0;
+      zoom: 1;
+    } */
+    .clearfix::after {
+      content: '';
+      display: block;
+      clear: both;
+    }
+  </style>
+</head>
+<body>
+  <div class="clearfix">
+    <div class="demo"></div>
+    <!-- Your content here -->
+    <div class="col">col0</div>
+    <div class="col">col1</div>
+    <div class="col">col2</div>
+    <div class="col">col3</div>
+  </div>
+</body>
+</html>
