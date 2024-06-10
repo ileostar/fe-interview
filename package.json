@@ -1,0 +1,12 @@
+{
+  "name": "fe-interview",
+  "scripts": {
+    "test": "vitest",
+    "test:ui": "vitest --ui"
+  },
+  "author": "ileostar <hi@leostar.top>",
+  "devDependencies": {
+    "@vitest/ui": "^1.6.0",
+    "vitest": "^1.6.0"
+  }
+}
